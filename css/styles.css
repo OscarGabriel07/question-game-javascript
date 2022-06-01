@@ -1,0 +1,105 @@
+.container-home{
+    position: absolute;
+    border: solid orangered;
+    border-radius: 10px;
+    width: 30%;
+    height: 60%;
+    top: 20%;
+    left: 35%;
+}
+
+.username{
+    text-align: center;
+    margin: 50px;
+    padding: 10px;
+}
+
+.table-players{
+    text-align: center;
+}
+
+.btn-game{
+    margin-top: 20px;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #48561D;
+    border-radius: 6px;
+    border: 2px solid #B0CD5C;
+}
+
+.btn-view-table-players{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+}
+
+#username{
+    border-radius: 5px;
+    width: 84%;
+    height: 30px;
+}
+
+.welcome{
+    margin: 8px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container-game{
+    position: absolute;
+    border: solid #AE9FD1;
+    border-radius: 10px;
+    width: 30%;
+    height: 60%;
+    top: 20%;
+    left: 35%;
+}
+
+.thank-you{
+    color: #5114E5;
+    margin: 8px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.score{
+    text-align: center;
+    margin-top: 30%;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+}
+
+.btn-score{
+    margin-top: 10%;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #5114E5;
+    border-radius: 6px;
+    border: 2px solid #AE9FD1;
+}
+
+#score{
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    width: 30%;
+}
+
+.container-players{
+    position: absolute;
+    border-radius: 10px;
+    width: 60%;
+    height: 80%;
+}
