@@ -1,3 +1,5 @@
+import { data } from "./data.js";
+
 loadHomePage();
 
 function blankPage() {
@@ -44,7 +46,7 @@ function loadHomePage() {
     containerHome.appendChild(tablePlayers);
 
     body.appendChild(containerHome);
-    goToTheThanksPage();
+    goToTheGamePage();
     goToThePlayersPage();
 }
 
@@ -117,11 +119,145 @@ function loadPlayersPage() {
     goToTheHomePage();
 }
 
-function goToTheThanksPage() {
+function loadGamePage() {
+    const body = document.querySelector('body');
+
+    const containerGame = document.createElement('div');
+    containerGame.className = 'container-game';
+
+    const containerInfoGame = document.createElement('div');
+    containerInfoGame.className = 'info-game';
+
+    const br1 = document.createElement('br');
+    const br2 = document.createElement('br');
+    const br3 = document.createElement('br');
+    const br4 = document.createElement('br');
+    const br5 = document.createElement('br');
+    const br6 = document.createElement('br');
+    const br7 = document.createElement('br');
+    const br8 = document.createElement('br');
+
+    const lbNombreUsuario = document.createElement('label');
+    lbNombreUsuario.textContent = 'Nombre de Usuario';
+    const inputNombreUsuario = document.createElement('input');
+    inputNombreUsuario.type = 'text';
+    inputNombreUsuario.readOnly = true;
+
+    const lbNivel = document.createElement('label');
+    lbNivel.textContent = 'Nivel';
+    const inputNivel = document.createElement('input');
+    inputNivel.type = 'text';
+    inputNivel.readOnly = true;
+
+    const lbPuntosObtenidos = document.createElement('label');
+    lbPuntosObtenidos.textContent = 'Puntos Obtenidos';
+    const inputPuntosObtenidos = document.createElement('input');
+    inputPuntosObtenidos.type = 'text';
+    inputPuntosObtenidos.readOnly = true;
+
+    const lbPuntosRonda = document.createElement('label');
+    lbPuntosRonda.textContent = 'Puntos de la Ronda';
+    const inputPuntosRonda = document.createElement('input');
+    inputPuntosRonda.type = 'text';
+    inputPuntosRonda.readOnly = true;
+
+    containerInfoGame.appendChild(lbNombreUsuario);
+    containerInfoGame.appendChild(inputNombreUsuario);
+    containerInfoGame.appendChild(br1);
+    containerInfoGame.appendChild(lbNivel);
+    containerInfoGame.appendChild(inputNivel);
+    containerInfoGame.appendChild(br2);
+    containerInfoGame.appendChild(lbPuntosObtenidos);
+    containerInfoGame.appendChild(br3);
+    containerInfoGame.appendChild(lbPuntosRonda);
+    containerInfoGame.appendChild(inputPuntosRonda);
+
+    const containerCuestions = document.createElement('div');
+    containerCuestions.className = 'container-questions';
+
+    const formCuestions = document.createElement('form');
+    
+    const cuestion = document.createElement('p');
+    cuestion.textContent = '¿Cuál es la capital de Bogotá?';
+
+    const inputOption1 = document.createElement('input');
+    inputOption1.type = 'radio';
+    inputOption1.id = 'bogota';
+    inputOption1.name = 'nivel1';
+    inputOption1.value = 'Bogotá';
+    const lbOption1 = document.createElement('label');
+    lbOption1.for = 'bogota';
+    lbOption1.textContent = 'Bogotá';
+
+    const inputOption2 = document.createElement('input');
+    inputOption2.type = 'radio';
+    inputOption2.id = 'cali';
+    inputOption2.name = 'nivel1';
+    inputOption2.value = 'Cali';
+    const lbOption2 = document.createElement('label');
+    lbOption2.for = 'cali';
+    lbOption2.textContent = 'Cali';
+
+    const inputOption3 = document.createElement('input');
+    inputOption3.type = 'radio';
+    inputOption3.id = 'medellin';
+    inputOption3.name = 'nivel1';
+    inputOption3.value = 'Medellín';
+    const lbOption3 = document.createElement('label');
+    lbOption3.for = 'medellin';
+    lbOption3.textContent = 'Medellín';
+
+    const inputOption4 = document.createElement('input');
+    inputOption4.type = 'radio';
+    inputOption4.id = 'barranquilla';
+    inputOption4.name = 'nivel1';
+    inputOption4.value = 'Barranquilla';
+    const lbOption4 = document.createElement('label');
+    lbOption4.for = 'barranquilla';
+    lbOption4.textContent = 'Barranquilla';
+
+    const btnResponder = document.createElement('input');
+    btnResponder.type = 'submit';
+    btnResponder.name = 'btn-responder';
+    btnResponder.id = 'responder';
+    btnResponder.value = 'Responder';
+
+    const btnRetirarse = document.createElement('input');
+    btnRetirarse.type = 'submit';
+    btnRetirarse.name = 'btn-retirarse';
+    btnRetirarse.id = 'retirarse';
+    btnRetirarse.value = 'Retirarse';
+
+    formCuestions.appendChild(cuestion);
+    formCuestions.appendChild(inputOption1);
+    formCuestions.appendChild(lbOption1);
+    formCuestions.appendChild(br4);
+    formCuestions.appendChild(inputOption2);
+    formCuestions.appendChild(lbOption2);
+    formCuestions.appendChild(br5);
+    formCuestions.appendChild(inputOption3);
+    formCuestions.appendChild(lbOption3);
+    formCuestions.appendChild(br6);
+    formCuestions.appendChild(inputOption4);
+    formCuestions.appendChild(lbOption4);
+    formCuestions.appendChild(br7);
+    formCuestions.appendChild(br8);
+    formCuestions.appendChild(btnResponder);
+    formCuestions.appendChild(btnRetirarse);
+
+    containerCuestions.appendChild(formCuestions);
+
+    containerGame.appendChild(containerInfoGame);
+    containerGame.appendChild(containerCuestions);
+
+    body.appendChild(containerGame);
+}
+
+function goToTheGamePage() {
     const gameButton = document.querySelector('.btn-game');
     gameButton.addEventListener('click', () => {
         blankPage();
-        loadThanksPage();
+        loadGamePage();
     });
 }
 
@@ -140,3 +276,11 @@ function goToThePlayersPage() {
         loadPlayersPage();
     });
 }
+
+// function goToTheThanksPage() {
+//     const playersButton = document.querySelector('.btn-view-table-players');
+//     playersButton.addEventListener('click', () => {
+//         blankPage();
+//         loadPlayersPage();
+//     });
+// }
