@@ -1,3 +1,6 @@
+/**
+ * Arreglo de objetos de donde se extraerán las preguntas del juego
+ */
 export const data = [
     {
         pregunta: '¿Cuál es la capital de Antioquia?',
@@ -44,7 +47,7 @@ export const data = [
         nivel: 1
     },
     {
-        pregunta: '¿Cuál es la capital de Risarlada?',
+        pregunta: '¿Cuál es la capital de Risaralda?',
         opciones: {
             a: 'Pereira',
             b: 'Monteria',

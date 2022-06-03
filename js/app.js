@@ -15,11 +15,18 @@ let jugador;
 
 loadHomePage();
 
+/**
+ * Esta función limpia todos los elementos que hayan en el HTML
+ */
 function blankPage() {
     const body = document.querySelector('body');
     body.innerHTML = "";
 }
 
+/**
+ * Esta función pinta en pantalla la página principal en donde el usuario puede ingresar un username
+ * y empezar a jugar, también tendrá la opción de ver la tabla de jugadores.
+ */
 function loadHomePage() {
     const body = document.querySelector('body');
 
@@ -63,6 +70,10 @@ function loadHomePage() {
     goToThePlayersPage();
 }
 
+/**
+ * Esta función pinta en pantalla la página donde se agradece al jugador por participar y también se 
+ * muestra la cantidad de puntos que ganó.
+ */
 function loadThanksPage() {
     const body = document.querySelector('body');
 
@@ -101,6 +112,9 @@ function loadThanksPage() {
     goToTheHomePage();
 }
 
+/**
+ * Esta función pinta en pantalla la tabla de jugadores con su puntaje obtenido 
+ */
 function loadPlayersPage() {
     const body = document.querySelector('body');
 
@@ -148,6 +162,10 @@ function loadPlayersPage() {
     goToTheHomePage();
 }
 
+/**
+ * Esta función pinta en pantalla las preguntas del juego, así como la información del nivel, puntaje de ronda,
+ * puntaje acumulado y nombre de usuario
+ */
 function loadGamePage() {
     const body = document.querySelector('body');
 
@@ -300,6 +318,11 @@ function loadGamePage() {
     retirarse();
 }
 
+/**
+ * Esta función valida si la respuesta seleccionada por el jugador es la correcta
+ * 
+ * @returns devuelve verdadero si es correcto y falso si es incorrecto
+ */
 function validarRespuesta() {
     let verifica = false;
     if (document.getElementById('opcionA').checked && document.getElementById('opcionA').value == data[numberQuestion].respuesta) {
@@ -314,6 +337,9 @@ function validarRespuesta() {
     return verifica;
 }
 
+/**
+ * Esta función está asociada al evento del botón responder que se encuentra donde se despliegan las preguntas
+ */
 function responder() {
     const botonResponder = document.querySelector('.btn-responder');
     botonResponder.addEventListener('click', () => {
@@ -351,6 +377,9 @@ function responder() {
     });
 }
 
+/**
+ * Esta función está asociada al evento del botón retirarse que se encuentra donde se despliegan las preguntas
+ */
 function retirarse() {
     const botonRetirarse = document.querySelector('.btn-retirarse');
     botonRetirarse.addEventListener('click', () => {
@@ -366,6 +395,10 @@ function retirarse() {
     });
 }
 
+/**
+ * Esta función está asociada al evento del botón jugar que se encuentra en la página principal
+ * Desde aquí se captura la información del nombre de usuario
+ */
 function goToTheGamePage() {
     const gameButton = document.querySelector('.btn-game');
     gameButton.addEventListener('click', () => {
@@ -379,6 +412,10 @@ function goToTheGamePage() {
     });
 }
 
+/**
+ * Esta función está asociada al evento del botón regresar que se encuentra en la página de agradecimiento
+ * Este botón pinta la página principal
+ */
 function goToTheHomePage() {
     const homeButton = document.querySelector('.btn-score');
     homeButton.addEventListener('click', () => {
@@ -388,6 +425,10 @@ function goToTheHomePage() {
     });
 }
 
+/**
+ * Esta función está asociada al evento del botón Ver Tabla Jugadores que se encuentra en la página principal
+ * Este botón pinta la página donde se ve la tabla de los jugadores con su respectivo puntaje
+ */
 function goToThePlayersPage() {
     const playersButton = document.querySelector('.btn-view-table-players');
     playersButton.addEventListener('click', () => {
